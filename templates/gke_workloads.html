@@ -1,0 +1,35 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>GKE Workloads</title>
+</head>
+<body>
+<h1>GKE Workloads</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Container Resource Utilization</th>
+<th>Pod Status</th>
+<th>Workload Health</th>
+</tr>
+</thead>
+<tbody>
+{% for workload in workloads %}
+<tr>
+<td>{{ workload.name }}</td>
+<td>{{ workload.container_resource_utilization }}</td>
+<td>{{ workload.pod_status }}</td>
+<td>{{ workload.workload_health }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
+
+

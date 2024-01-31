@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CloudSQL Instances</title>
+</head>
+<body>
+<h1>CloudSQL Instances</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Connection Counts</th>
+<th>Query Execution Times</th>
+<th>Storage Usage</th>
+</tr>
+</thead>
+<tbody>
+{% for instance in instances %}
+<tr>
+<td>{{ instance.name }}</td>
+<td>{{ instance.connection_counts }}</td>
+<td>{{ instance.query_execution_times }}</td>
+<td>{{ instance.storage_usage }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+

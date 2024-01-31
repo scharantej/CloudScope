@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>VMs</title>
+</head>
+<body>
+<h1>VMs</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>CPU Utilization</th>
+<th>Memory Usage</th>
+<th>Network Traffic</th>
+<th>Disk I/O</th>
+</tr>
+</thead>
+<tbody>
+{% for vm in vms %}
+<tr>
+<td>{{ vm.name }}</td>
+<td>{{ vm.cpu_utilization }}</td>
+<td>{{ vm.memory_usage }}</td>
+<td>{{ vm.network_traffic }}</td>
+<td>{{ vm.disk_io }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
+
+
